@@ -16,16 +16,9 @@ class QuickstartUser(HttpUser):
         time.sleep(1)
 
     def on_start(self):
-        self.client.post(url="/v1/signUp",
-                         json={
-                             "userEmail": "test1@gmail.com",
-                             "userPassword": "1q2w3e4r!@#",
-                             "userNickname": "pepe"
-                         })
-
         self.x_auth_token = self.client.post("/v1/signIn",
                                              json={
-                                                 "userEmail": "test1@gmail.com",
+                                                 "userEmail": "GHGHGHKO@gmail.com",
                                                  "userPassword": "1q2w3e4r!@#",
                                              }).json()["data"]
 
